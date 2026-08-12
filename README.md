@@ -12,6 +12,9 @@
 
 Universiti Teknologi PETRONAS · CeRDaS · The University of Texas MD Anderson Cancer Center · SDAIA-KFUPM Joint Research Center for Artificial Intelligence
 
+**Overview**
+
+Reinforcement learning has become a central component of large language model post-training, extending beyond preference alignment to reasoning, tool use, agentic behaviour, safety, and continual improvement. This survey synthesizes 107 representative studies published between 2017 and 2026 into a unified framework spanning five functional domains. Beyond narrative synthesis, we provide a quantitative methodological audit, an 18-type reward-signal taxonomy, a catalogue of failure modes and mitigation strategies, practitioner guidance, and RL–LLM-REPORT, a 32-item reporting checklist designed to improve transparency and reproducibility in RL-based LLM research.
 > **Study design:** this work is a **narrative survey combined with a structured, purposive evidence map**. It is deliberately **not a systematic review**, and corpus percentages describe the curated sample rather than field-wide prevalence.
 
 <p align="center">
