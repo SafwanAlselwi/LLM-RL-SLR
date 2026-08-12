@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reinforcement Learning for Large Language Models: A Comprehensive Survey from Alignment to Agentic Decision-Making. 107 curated studies, five functional domains, 18 reward-signal types, and RL–LLM-REPORT.">
+  <meta name="theme-color" content="#0b132b">
+  <meta property="og:title" content="Reinforcement Learning for Large Language Models">
+  <meta property="og:description" content="A comprehensive cross-domain survey from alignment to agentic decision-making.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/taxonomy.png">
+  <title>RL for LLMs — Comprehensive Survey</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="RL for LLMs home">
+        <span class="brand-mark">RL</span>
+        <span class="brand-text">RL for LLMs</span>
+      </a>
+      <button class="menu-button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#taxonomy">Taxonomy</a>
+        <a href="#findings">Findings</a>
+        <a href="#guidance">Guidance</a>
+        <a href="#report">RL–LLM-REPORT</a>
+        <a href="#resources">Resources</a>
+      </nav>
+      <a class="nav-github" href="https://github.com/SafwanAlselwi/LLM-RL-SLR" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <div class="eyebrow">Survey · 107 curated studies · 2017–2026</div>
+          <h1>Reinforcement Learning for Large Language Models</h1>
+          <p class="subtitle">A Comprehensive Survey from Alignment to Agentic Decision-Making</p>
+
+          <p class="authors">
+            Ebrahim Hamid Sumiea · Zaid Fawaz Jarallah · Amgad Muneer · Safwan Mahmood Al-Selwi ·
+            Said Jadid Abdulkadir · Alawi Alqushaibi · Ashraf Osman Ibrahim · Mohammed Gamal Ragab · Jia Wu
+          </p>
+          <p class="affiliations">
+            Universiti Teknologi PETRONAS · CeRDaS · The University of Texas MD Anderson Cancer Center ·
+            SDAIA-KFUPM Joint Research Center for Artificial Intelligence
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="assets/paper.pdf">Read the paper</a>
+            <a class="button button-secondary" href="#taxonomy">Explore taxonomy</a>
+            <a class="button button-ghost" href="https://github.com/SafwanAlselwi/LLM-RL-SLR" target="_blank" rel="noopener">View repository</a>
+          </div>
+
+          <div class="design-note">
+            <strong>Study design:</strong> narrative survey + structured, purposive evidence map.
+            The corpus is not a protocol-driven systematic review, so percentages describe the curated sample rather than field-wide prevalence.
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Survey at a glance">
+          <div class="hero-card-label">At a glance</div>
+          <div class="metric-grid">
+            <div class="metric"><span class="metric-value">107</span><span class="metric-label">Studies</span></div>
+            <div class="metric"><span class="metric-value">5</span><span class="metric-label">Domains</span></div>
+            <div class="metric"><span class="metric-value">18</span><span class="metric-label">Reward types</span></div>
+            <div class="metric"><span class="metric-value">32</span><span class="metric-label">Report items</span></div>
+          </div>
+          <div class="hero-card-rule"></div>
+          <p><strong>Final literature update</strong><br>8 August 2026</p>
+          <p><strong>Quantitative training stratum</strong><br>82 RL-trained systems</p>
+          <p><strong>Mitigation catalogue</strong><br>93 instances · 9 strategy categories</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Why this survey</span>
+          <h2>A single map for a fragmented RL-for-LLM landscape</h2>
+          <p>
+            RL has expanded from preference alignment into reasoning with verifiable rewards, tool-using and agentic systems,
+            safety-focused training, and continual post-training. This survey connects those threads with a shared functional taxonomy
+            and a corpus-wide quantitative audit.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-num">01</span>
+            <h3>Cross-domain taxonomy</h3>
+            <p>Five functional domains spanning alignment, reasoning, tool use and agents, safety and robustness, and continual improvement.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-num">02</span>
+            <h3>Reward design map</h3>
+            <p>An 18-type reward-signal taxonomy extending beyond the usual reward-model versus “reward-free” distinction.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-num">03</span>
+            <h3>Methodological audit</h3>
+            <p>Algorithms, feedback sources, evaluation practices, failure modes, mitigations, and reproducibility are analyzed across the curated corpus.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-num">04</span>
+            <h3>Actionable reporting standard</h3>
+            <p>RL–LLM-REPORT proposes 32 reporting items with empirical prevalence baselines and applicability-aware scoring.</p>
+          </article>
+        </div>
+
+        <figure class="paper-figure">
+          <img src="assets/roadmap.png" alt="Roadmap of the survey, showing foundations and taxonomy feeding five domain deep dives, cross-cutting analysis, guidance, open challenges, and conclusion.">
+          <figcaption>Survey roadmap: foundations and taxonomy feed five domain deep dives, followed by cross-cutting analysis, practitioner guidance, and open challenges.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="taxonomy">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Unified taxonomy</span>
+          <h2>Five functional domains, one optimization axis</h2>
+          <p>The taxonomy organizes RL for LLMs by functional purpose while also tracking optimization architecture: on-policy, off-policy, hybrid, and explicit-reward-model-free preference optimization.</p>
+        </div>
+
+        <figure class="paper-figure figure-white">
+          <img src="assets/taxonomy.png" alt="Unified taxonomy of RL for LLMs with five functional domains and representative methods.">
+        </figure>
+
+        <div class="domain-grid">
+          <article class="domain-card domain-blue">
+            <div class="domain-count">42 papers</div>
+            <h3>Alignment</h3>
+            <p>RLHF, RLAIF, Constitutional AI, DPO-family methods, and online preference optimization.</p>
+          </article>
+          <article class="domain-card domain-green">
+            <div class="domain-count">22 papers</div>
+            <h3>Reasoning</h3>
+            <p>RL with verifiable rewards, GRPO/DAPO, process reward models, self-training, and formal verification.</p>
+          </article>
+          <article class="domain-card domain-orange">
+            <div class="domain-count">19 papers</div>
+            <h3>Tool Use & Agentic</h3>
+            <p>Tool learning, browser/computer agents, code agents, search-augmented RL, and end-to-end agentic training.</p>
+          </article>
+          <article class="domain-card domain-red">
+            <div class="domain-count">18 papers</div>
+            <h3>Safety & Robustness</h3>
+            <p>RL red-teaming, constrained RL, adversarial training, latent adversarial training, and diverse red-team objectives.</p>
+          </article>
+          <article class="domain-card domain-purple">
+            <div class="domain-count">5 papers</div>
+            <h3>Continual Improvement</h3>
+            <p>Self-play, iterative RLHF, online model merging, continual preference learning, and forgetting control.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="findings">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Cross-cutting analysis</span>
+          <h2>Five macro-level patterns</h2>
+          <p>Across the 107-study purposive corpus, algorithm choice is diversifying while evaluation and reporting lag behind the pace of method development.</p>
+        </div>
+
+        <figure class="paper-figure">
+          <img src="assets/macro_patterns.png" alt="Five macro-level patterns: PPO diversification, reward sources, safety evaluation gaps, failure modes, and reporting practices.">
+        </figure>
+
+        <div class="finding-grid">
+          <article class="finding-card">
+            <span class="finding-value">82% → 42.7%</span>
+            <h3>PPO dominance erodes</h3>
+            <p>PPO-style optimization appears in 9/11 RL-trained systems in 2020–2022 versus 35/82 corpus-wide, indicating diversification rather than a single replacement.</p>
+          </article>
+          <article class="finding-card">
+            <span class="finding-value">18</span>
+            <h3>Reward signals proliferate</h3>
+            <p>Reward design now spans 18 types; non-human feedback sources are substantially more common than human annotation in the curated sample.</p>
+          </article>
+          <article class="finding-card">
+            <span class="finding-value">76.6%</span>
+            <h3>Safety evaluation is missing</h3>
+            <p>More than three quarters of studies omit safety evaluation entirely, exposing a cross-domain blind spot.</p>
+          </article>
+          <article class="finding-card">
+            <span class="finding-value">28.0%</span>
+            <h3>Reward hacking leads failures</h3>
+            <p>Reward hacking is the most frequently reported failure mode, followed by distribution shift at 21.5%.</p>
+          </article>
+          <article class="finding-card">
+            <span class="finding-value">5.6%</span>
+            <h3>Reproducibility is thin</h3>
+            <p>Only 5.6% of papers report compute budgets and 5.6% report random seeds; complete hyperparameter reporting is also uncommon.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="evolution">
+      <div class="container">
+        <div class="section-heading light">
+          <span class="kicker">Historical evolution</span>
+          <h2>Four overlapping waves, from preference RL to reasoning and agents</h2>
+          <p>The survey traces foundations, alignment at scale, simplification through direct preference objectives, and the recent reasoning-and-agents wave.</p>
+        </div>
+        <figure class="paper-figure figure-white">
+          <img src="assets/timeline.png" alt="Milestone timeline of reinforcement learning for large language models, 2017 to 2026.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="guidance">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Practitioner guidance</span>
+          <h2>Match the training recipe to the functional goal</h2>
+          <p>The decision-support matrix is intended as a set of evidence-informed starting points, not prescriptions.</p>
+        </div>
+
+        <div class="guidance-table-wrap">
+          <table class="guidance-table">
+            <thead>
+              <tr>
+                <th>Domain</th>
+                <th>Algorithm</th>
+                <th>Reward</th>
+                <th>Evaluation</th>
+                <th>Known pitfalls</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Alignment</strong></td>
+                <td>DPO / SimPO; PPO</td>
+                <td>Implicit preference or learned BT</td>
+                <td>AlpacaEval 2, MT-Bench, Arena-Hard + TruthfulQA</td>
+                <td>Length exploitation, reward hacking, alignment tax</td>
+              </tr>
+              <tr>
+                <td><strong>Reasoning</strong></td>
+                <td>GRPO / DAPO; PPO + PRM</td>
+                <td>Verifiable rule-based; PRM</td>
+                <td>MATH, GSM8K, AIME, ProcessBench</td>
+                <td>Format hacking, outcome-only masking of reasoning</td>
+              </tr>
+              <tr>
+                <td><strong>Tool Use</strong></td>
+                <td>PPO/GRPO with environment reward</td>
+                <td>Environment feedback; execution success</td>
+                <td>WebArena, ToolBench</td>
+                <td>API misuse, hallucinated tool calls, weak safety evaluation</td>
+              </tr>
+              <tr>
+                <td><strong>Safety</strong></td>
+                <td>PPO with classifier / constraints</td>
+                <td>Classifier-based; adversarial</td>
+                <td>HarmBench, JailbreakBench</td>
+                <td>Mode collapse, over-refusal</td>
+              </tr>
+              <tr>
+                <td><strong>Continual</strong></td>
+                <td>Online DPO; iterative RLHF</td>
+                <td>Progressive reference; self-play</td>
+                <td>Held-out evaluation; capability retention</td>
+                <td>Forgetting, reward staleness</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout-row">
+          <div class="callout">
+            <span class="callout-label">Operational practice</span>
+            <h3>Monitor reward hacking</h3>
+            <p>Track proxy-versus-gold reward divergence and use robust reward-modeling strategies to detect overoptimization early.</p>
+          </div>
+          <div class="callout">
+            <span class="callout-label">Operational practice</span>
+            <h3>Ship a minimal safety suite</h3>
+            <p>Include adversarial robustness, refusal/over-refusal checks, a threat model, and explicit pass/fail criteria for every RL-trained system.</p>
+          </div>
+          <div class="callout">
+            <span class="callout-label">Operational practice</span>
+            <h3>Report multiple runs</h3>
+            <p>Use at least three seeds with dispersion statistics when feasible, so improvements can be distinguished from run-to-run variance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="report">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">RL–LLM-REPORT</span>
+          <h2>A 32-item reporting checklist for RL-based LLM research</h2>
+          <p>Items are grouped into five categories and labeled Mandatory, Recommended, or Optional. Applicability-aware scoring avoids penalizing methods for items that do not apply.</p>
+        </div>
+
+        <div class="report-summary">
+          <div><span>Median retrospective score</span><strong>47.2%</strong></div>
+          <div><span>Observed range</span><strong>32.8–85.9%</strong></div>
+          <div><span>Proposed Mandatory threshold</span><strong>70%</strong></div>
+          <div><span>Systems meeting threshold</span><strong>13 / 82</strong></div>
+        </div>
+
+        <p class="caveat">
+          <strong>Important:</strong> the checklist items and prevalence baselines are evidence-derived, but the Mandatory/Recommended/Optional labels,
+          weighting scheme, partial-credit convention, and 70% threshold are author-proposed starting points and have not yet undergone formal external validation.
+        </p>
+
+        <div class="accordion">
+          <details open>
+            <summary><span>A. Reward Definition</span><span>6 items</span></summary>
+            <div class="report-table-wrap">
+              <table class="report-table">
+                <thead><tr><th>#</th><th>Item</th><th>Priority</th><th>Prevalence</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Reward type (learned/implicit/rule-based/etc.)</td><td><span class="pill m">M</span></td><td>97.6%</td></tr>
+                  <tr><td>2</td><td>Reward model architecture and scale</td><td><span class="pill m">M</span></td><td>33.8%</td></tr>
+                  <tr><td>3</td><td>Reward training data source and size</td><td><span class="pill m">M</span></td><td>32.3%</td></tr>
+                  <tr><td>4</td><td>Reward objective / loss function</td><td><span class="pill m">M</span></td><td>100.0%</td></tr>
+                  <tr><td>5</td><td>Feedback source (human/AI/rule-based)</td><td><span class="pill m">M</span></td><td>86.6%</td></tr>
+                  <tr><td>6</td><td>Reward failure modes observed</td><td><span class="pill r">R</span></td><td>67.1%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details>
+            <summary><span>B. Dataset Disclosure</span><span>5 items</span></summary>
+            <div class="report-table-wrap">
+              <table class="report-table">
+                <thead><tr><th>#</th><th>Item</th><th>Priority</th><th>Prevalence</th></tr></thead>
+                <tbody>
+                  <tr><td>7</td><td>Training data composition and size</td><td><span class="pill m">M</span></td><td>12.2%</td></tr>
+                  <tr><td>8</td><td>Preference data collection protocol</td><td><span class="pill m">M</span></td><td>50.0%</td></tr>
+                  <tr><td>9</td><td>Evaluation data specification</td><td><span class="pill m">M</span></td><td>100.0%</td></tr>
+                  <tr><td>10</td><td>Data contamination / overlap analysis</td><td><span class="pill r">R</span></td><td>9.8%</td></tr>
+                  <tr><td>11</td><td>Public data release or access instructions</td><td><span class="pill r">R</span></td><td>12.2%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details>
+            <summary><span>C. KL &amp; Optimization</span><span>7 items</span></summary>
+            <div class="report-table-wrap">
+              <table class="report-table">
+                <thead><tr><th>#</th><th>Item</th><th>Priority</th><th>Prevalence</th></tr></thead>
+                <tbody>
+                  <tr><td>12</td><td>RL algorithm name and variant</td><td><span class="pill m">M</span></td><td>100.0%</td></tr>
+                  <tr><td>13</td><td>KL regularisation type and coefficient</td><td><span class="pill m">M</span></td><td>9.8%</td></tr>
+                  <tr><td>14</td><td>Learning rate and schedule</td><td><span class="pill m">M</span></td><td>28.0%</td></tr>
+                  <tr><td>15</td><td>Batch size and number of training steps</td><td><span class="pill m">M</span></td><td>1.2%</td></tr>
+                  <tr><td>16</td><td>Clipping / entropy / normalisation settings</td><td><span class="pill r">R</span></td><td>3.7%</td></tr>
+                  <tr><td>17</td><td>Compute budget (GPU×hours or FLOPs)</td><td><span class="pill m">M</span></td><td>5.6%</td></tr>
+                  <tr><td>18</td><td>Value model specification (if applicable)</td><td><span class="pill r">R</span></td><td>19.2%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details>
+            <summary><span>D. Annotation Process</span><span>6 items</span></summary>
+            <div class="report-table-wrap">
+              <table class="report-table">
+                <thead><tr><th>#</th><th>Item</th><th>Priority</th><th>Prevalence</th></tr></thead>
+                <tbody>
+                  <tr><td>19</td><td>Annotator demographics and training</td><td><span class="pill r">R</span></td><td>8.3%</td></tr>
+                  <tr><td>20</td><td>Inter-annotator agreement</td><td><span class="pill r">R</span></td><td>58.3%</td></tr>
+                  <tr><td>21</td><td>Annotation quality control measures</td><td><span class="pill r">R</span></td><td>33.3%</td></tr>
+                  <tr><td>22</td><td>Number of comparisons / annotations</td><td><span class="pill m">M</span></td><td>75.0%</td></tr>
+                  <tr><td>23</td><td>Annotation interface / prompt design</td><td><span class="pill o">O</span></td><td>0.0%</td></tr>
+                  <tr><td>24</td><td>Ethical review / IRB approval</td><td><span class="pill o">O</span></td><td>0.0%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details>
+            <summary><span>E. Statistical Validation</span><span>8 items</span></summary>
+            <div class="report-table-wrap">
+              <table class="report-table">
+                <thead><tr><th>#</th><th>Item</th><th>Priority</th><th>Prevalence</th></tr></thead>
+                <tbody>
+                  <tr><td>25</td><td>Multiple random seeds / runs reported</td><td><span class="pill m">M</span></td><td>5.6%</td></tr>
+                  <tr><td>26</td><td>Confidence intervals or standard errors</td><td><span class="pill m">M</span></td><td>19.5%</td></tr>
+                  <tr><td>27</td><td>Statistical significance tests</td><td><span class="pill r">R</span></td><td>0.0%</td></tr>
+                  <tr><td>28</td><td>Effect size reporting</td><td><span class="pill r">R</span></td><td>0.0%</td></tr>
+                  <tr><td>29</td><td>Ablation / sensitivity analysis</td><td><span class="pill m">M</span></td><td>95.1%</td></tr>
+                  <tr><td>30</td><td>Code release</td><td><span class="pill m">M</span></td><td>43.0%</td></tr>
+                  <tr><td>31</td><td>Model weight release</td><td><span class="pill r">R</span></td><td>19.6%</td></tr>
+                  <tr><td>32</td><td>Evaluation reproducibility package</td><td><span class="pill r">R</span></td><td>25.2%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="challenges">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Research agenda</span>
+          <h2>Eight open challenges</h2>
+          <p>The cross-domain synthesis exposes structural gaps that are difficult to see from single-domain reviews.</p>
+        </div>
+
+        <div class="challenge-grid">
+          <article><span>01</span><h3>Reward-free reasoning</h3><p>Can offline preference objectives match on-policy RL with verifiable rewards at scale and generalize beyond mathematics?</p></article>
+          <article><span>02</span><h3>Universal safety evaluation</h3><p>Develop a lightweight, domain-agnostic safety suite that every RL-for-LLM paper can afford to run.</p></article>
+          <article><span>03</span><h3>Multimodal RL</h3><p>Extend verifiable-reward training to vision-language, audio, and embodied settings where verification is harder to automate.</p></article>
+          <article><span>04</span><h3>Multi-agent RL</h3><p>Address credit assignment, training stability, communication, system-level rewards, safety, and external validation for interacting agents.</p></article>
+          <article><span>05</span><h3>Process supervision beyond math</h3><p>Define meaningful “steps” and “progress” for open-ended domains such as medicine, law, and scientific writing.</p></article>
+          <article><span>06</span><h3>Attacker–defender equilibria</h3><p>Characterize whether red-team / harden cycles converge, oscillate, or escalate under optimization-based attacks.</p></article>
+          <article><span>07</span><h3>Lifelong post-training</h3><p>Study reward staleness, capability retention, and whether safety survives repeated deployed updates.</p></article>
+          <article><span>08</span><h3>Methodological consolidation</h3><p>Improve compute, seed, and hyperparameter reporting while moving toward standardized benchmark suites and reporting norms.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="resources">
+      <div class="container">
+        <div class="section-heading light">
+          <span class="kicker">Open science</span>
+          <h2>Reproducibility package</h2>
+          <p>The manuscript specifies six core release artifacts. This starter website names them exactly, but the validated study files must be added by the author team.</p>
+        </div>
+
+        <div class="resource-grid">
+          <div class="resource-card"><code>data/evidence_table.csv</code><p>Complete 107-row study-level evidence table.</p><span class="status">Pending source file</span></div>
+          <div class="resource-card"><code>codebook/codebook.md</code><p>Attribute definitions, decision rules, and adjudication log.</p><span class="status">Pending source file</span></div>
+          <div class="resource-card"><code>data/failure_mitigation_instances.csv</code><p>Failure-mode and mitigation instance catalogue.</p><span class="status">Pending source file</span></div>
+          <div class="resource-card"><code>data/rlllm_report_scoring_matrix.csv</code><p>Full item-level RL–LLM-REPORT scoring matrix.</p><span class="status">Pending source file</span></div>
+          <div class="resource-card"><code>scripts/generate_scoring_matrix.py</code><p>Deterministic generator for the checklist matrix.</p><span class="status">Pending source file</span></div>
+          <div class="resource-card"><code>scripts/reproduce_tables.py</code><p>Recomputes the quantitative tables and expected-value checks.</p><span class="status">Pending source file</span></div>
+        </div>
+
+        <div class="resource-actions">
+          <a class="button button-light" href="assets/paper.pdf">Download paper PDF</a>
+          <a class="button button-outline-light" href="https://github.com/SafwanAlselwi/LLM-RL-SLR" target="_blank" rel="noopener">Open GitHub repository</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="citation">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Citation</span>
+          <h2>Cite the survey</h2>
+          <p>Until a final DOI and publication record are available, use the manuscript citation below. Update this block after publication.</p>
+        </div>
+
+        <div class="citation-box">
+<pre id="bibtex">@misc{sumiea2026rl_llm_survey,
+  title  = {Reinforcement Learning for Large Language Models: A Comprehensive Survey from Alignment to Agentic Decision-Making},
+  author = {Sumiea, Ebrahim Hamid and Jarallah, Zaid Fawaz and Muneer, Amgad and Al-Selwi, Safwan Mahmood and Abdulkadir, Said Jadid and Alqushaibi, Alawi and Ibrahim, Ashraf Osman and Ragab, Mohammed Gamal and Wu, Jia},
+  year   = {2026},
+  note   = {Preprint manuscript}
+}</pre>
+          <button class="copy-button" type="button" data-copy="#bibtex">Copy BibTeX</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>RL for LLMs Survey</strong>
+        <p>From alignment to agentic decision-making.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="assets/paper.pdf">Paper</a>
+        <a href="https://github.com/SafwanAlselwi/LLM-RL-SLR" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
