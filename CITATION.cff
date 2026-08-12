@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this survey or its accompanying resources, please cite the manuscript."
+title: "Reinforcement Learning for Large Language Models: A Comprehensive Survey from Alignment to Agentic Decision-Making"
+type: article
+authors:
+  - family-names: "Sumiea"
+    given-names: "Ebrahim Hamid"
+    orcid: "https://orcid.org/0000-0002-2829-0842"
+    affiliation: "Universiti Teknologi PETRONAS"
+  - family-names: "Jarallah"
+    given-names: "Zaid Fawaz"
+    orcid: "https://orcid.org/0000-0001-5704-4758"
+    affiliation: "Universiti Teknologi PETRONAS"
+  - family-names: "Muneer"
+    given-names: "Amgad"
+    orcid: "https://orcid.org/0000-0002-7157-3020"
+    affiliation: "The University of Texas MD Anderson Cancer Center"
+  - family-names: "Al-Selwi"
+    given-names: "Safwan Mahmood"
+    affiliation: "SDAIA-KFUPM Joint Research Center for Artificial Intelligence"
+  - family-names: "Abdulkadir"
+    given-names: "Said Jadid"
+    affiliation: "Universiti Teknologi PETRONAS"
+  - family-names: "Alqushaibi"
+    given-names: "Alawi"
+    affiliation: "Universiti Teknologi PETRONAS"
+  - family-names: "Ibrahim"
+    given-names: "Ashraf Osman"
+    affiliation: "Universiti Teknologi PETRONAS"
+  - family-names: "Ragab"
+    given-names: "Mohammed Gamal"
+    affiliation: "Universiti Teknologi PETRONAS"
+  - family-names: "Wu"
+    given-names: "Jia"
+    orcid: "https://orcid.org/0000-0001-8392-8338"
+    affiliation: "The University of Texas MD Anderson Cancer Center"
+year: 2026
+repository-code: "https://github.com/SafwanAlselwi/LLM-RL-SLR"
+url: "https://safwanalselwi.github.io/LLM-RL-SLR/"
+keywords:
+  - reinforcement learning
+  - large language models
+  - RLHF
+  - preference optimization
+  - reward modeling
+  - alignment
+  - reasoning
+  - LLM agents
+  - AI safety
