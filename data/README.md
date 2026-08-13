@@ -8,4 +8,4 @@ Expected files:
 - `failure_mitigation_instances.csv` — failure-mode/mitigation instance list
 - `rlllm_report_scoring_matrix.csv` — item-level RL–LLM-REPORT scoring matrix
 
-The actual study files were not provided to ChatGPT in the current conversation, so this package intentionally does **not** fabricate them. Add the validated source files produced by the authors.
+The validated study-level evidence files will be released here following final author verification.
