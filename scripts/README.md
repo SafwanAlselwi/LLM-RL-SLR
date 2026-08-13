@@ -5,4 +5,4 @@ Place the validated analysis scripts here:
 - `generate_scoring_matrix.py`
 - `reproduce_tables.py`
 
-The manuscript states that the scoring generator derives the item-level RL–LLM-REPORT matrix from the evidence table and that `reproduce_tables.py` recomputes the reported quantitative values with explicit checks.
+This directory will host the validated analysis scripts used to generate the RL–LLM-REPORT scoring matrix and reproduce the quantitative results reported in the manuscript.
