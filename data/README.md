@@ -1,6 +1,6 @@
 # Data
 
-This directory is reserved for the machine-readable evidence files described in the manuscript.
+This directory will host the machine-readable evidence files supporting the quantitative analyses reported in the manuscript.
 
 Expected files:
 
