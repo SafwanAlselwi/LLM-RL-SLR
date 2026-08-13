@@ -143,7 +143,7 @@ LLM-RL-SLR/
 
 ## Reproducibility package
 
-The manuscript specifies the following release artifacts. **They are not fabricated in this starter package**; add the real files from the study when ready:
+The manuscript specifies the following reproducibility artifacts, which will be released here following final validation by the authors:
 
 ```text
 data/evidence_table.csv
